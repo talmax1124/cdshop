@@ -5,6 +5,7 @@ import store from "./store";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import "flowbite";
 
 ReactDOM.render(
   <Provider store={store}>
