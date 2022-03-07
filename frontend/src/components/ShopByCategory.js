@@ -3,9 +3,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
+
+import { AppBar, Tabs, Tab } from "@mui/material";
 
 const ShopByCategory = ({ products }) => {
   //GET CATEGORIES
@@ -47,10 +46,15 @@ const ShopByCategory = ({ products }) => {
           variant="scrollable"
           scrollButtons="on"
           aria-label="scrollable force tabs example"
-        > 
+        >
           {keys.map((cat, k) => (
             <Link to={`/products/category/${cat}`}>
-              <Tab key={k} style={{ color: "black" }} label={cat} textColor="primary">
+              <Tab
+                key={k}
+                style={{ color: "black" }}
+                label={cat}
+                textColor="primary"
+              >
                 {cat}
               </Tab>
             </Link>

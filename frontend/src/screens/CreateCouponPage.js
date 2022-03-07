@@ -20,8 +20,9 @@ const CreateCouponPage = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    loadAllCoupons();
-  }, [dispatch]);
+    loadAllCoupons()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dispatch])
 
   const loadAllCoupons = async () => {
     return await dispatch(getCoupons());

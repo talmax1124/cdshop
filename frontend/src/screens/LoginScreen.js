@@ -7,19 +7,20 @@ import Loader from "../components/Loader";
 // import FormContainer from "../components/FormContainer";
 import { login, getGoogleUserInfo } from "../actions/userActions";
 
+import {
+  Avatar,
+  Button,
+  CssBaseline,
+  TextField,
+  Paper,
+  Box,
+  Grid,
+  Typography,
+} from "@mui/material";
 
-import Avatar from "@material-ui/core/Avatar";
-import Button from "@material-ui/core/Button";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import TextField from "@material-ui/core/TextField";
+import { makeStyles } from "@mui/material/styles";
 
-// import Link from "@material-ui/core/Link";
-import Paper from "@material-ui/core/Paper";
-import Box from "@material-ui/core/Box";
-import Grid from "@material-ui/core/Grid";
 // import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
@@ -175,7 +176,7 @@ const LoginScreen = ({ location, history }) => {
               </Button>
               <Grid container>
                 <Grid item xs>
-                  <Link to='/forgot-password' variant="body2">
+                  <Link to="/forgot-password" variant="body2">
                     Forgot password?
                   </Link>
                 </Grid>

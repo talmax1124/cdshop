@@ -5,7 +5,6 @@ import FormContainer from "../components/FormContainer";
 import CheckoutSteps from "../components/CheckoutSteps";
 import { saveShippingAddress } from "../actions/cartActions";
 
-
 import { Link } from "react-router-dom";
 
 const ShippingScreen = ({ history }) => {
@@ -18,7 +17,6 @@ const ShippingScreen = ({ history }) => {
   const [postalCode, setPostalCode] = useState(shippingAddress.postalCode);
   const [country, setCountry] = useState(shippingAddress.country);
 
-  const [shippingInfo, setShippingInfo] = useState("");
   const dispatch = useDispatch();
 
   const submitHandler = (e) => {
@@ -96,7 +94,9 @@ const ShippingScreen = ({ history }) => {
         </Form.Group>
 
         <Link to="/cart">
-          <Button variant="info" style={{marginRight: "5px"}}>Go Back</Button>
+          <Button variant="info" style={{ marginRight: "5px" }}>
+            Go Back
+          </Button>
         </Link>
         <Button type="submit" variant="primary">
           Continue

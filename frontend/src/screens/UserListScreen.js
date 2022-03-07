@@ -6,14 +6,18 @@ import Message from "../components/Message";
 import Loader from "../components/Loader";
 import { listUsers, deleteUser } from "../actions/userActions";
 
-import { withStyles, makeStyles } from "@material-ui/core/styles";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
+import {
+  withStyles,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+} from "@mui/material";
+
+import { makeStyles } from "@mui/material/styles";
 
 const UserListScreen = ({ history }) => {
   const dispatch = useDispatch();
@@ -153,7 +157,7 @@ const UserListScreen = ({ history }) => {
                   <StyledTableCell align="right">
                     <LinkContainer to={`/admin/user/${user._id}/edit`}>
                       <Button className="btn-sm" variant="dark">
-                      <i className="fas fa-edit"></i>
+                        <i className="fas fa-edit"></i>
                       </Button>
                     </LinkContainer>
                     <Button

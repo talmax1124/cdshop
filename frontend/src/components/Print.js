@@ -1,11 +1,7 @@
 import React from "react";
-import {
-  Select,
-  InputLabel,
-  FormControl,
-  makeStyles,
-  MenuItem,
-} from "@material-ui/core/";
+import { Select, InputLabel, FormControl, MenuItem } from "@mui/material";
+
+import { makeStyles } from "@mui/material/styles";
 
 const useStyles = makeStyles((theme) => ({
   typography: {

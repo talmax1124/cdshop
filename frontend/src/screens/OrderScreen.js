@@ -139,18 +139,7 @@ const OrderScreen = ({ match, history }) => {
         setSdkReady(true);
       }
     }
-  }, [
-    dispatch,
-    orderId,
-    successPay,
-    successDeliver,
-    // successStatus,
-    order,
-    successDispatch,
-    successOrderCancel,
-    history,
-    userInfo,
-  ]);
+  }, [dispatch, orderId, successPay, successDeliver, order, successDispatch, successOrderCancel, history, userInfo, successPack]);
 
   const printAs = (e) => {
     const downloadAs = e.target.value;

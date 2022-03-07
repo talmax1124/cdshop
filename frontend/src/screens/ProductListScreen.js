@@ -13,14 +13,18 @@ import {
 } from "../actions/productActions";
 import { PRODUCT_CREATE_RESET } from "../constants/productConstants";
 
-import { withStyles, makeStyles } from "@material-ui/core/styles";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
+import {
+  withStyles,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+} from "@mui/material";
+
+import { makeStyles } from "@mui/material/styles";
 
 const ProductListScreen = ({ history, match }) => {
   const pageNumber = match.params.pageNumber || 1;
@@ -151,7 +155,10 @@ const ProductListScreen = ({ history, match }) => {
                 {products.map((product) => (
                   <StyledTableRow key={product._id}>
                     <StyledTableCell component="th" scope="row">
-                      <a href={`https://creativeduo.net/product/${product._id}`} target="blank">
+                      <a
+                        href={`https://creativeduo.net/product/${product._id}`}
+                        target="blank"
+                      >
                         {product._id}
                       </a>
                     </StyledTableCell>

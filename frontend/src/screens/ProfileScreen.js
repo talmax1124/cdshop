@@ -9,24 +9,26 @@ import { getUserDetails, updateUserProfile } from "../actions/userActions";
 import { listMyOrders } from "../actions/orderActions";
 import { USER_UPDATE_PROFILE_RESET } from "../constants/userConstants";
 
-import Avatar from "@material-ui/core/Avatar";
+import {
+  Avatar,
+  Grid,
+  TextField,
+  withStyles,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+} from "@mui/material";
+
+import { makeStyles } from "@mui/material/styles";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 
-import Grid from "@material-ui/core/Grid";
-import TextField from "@material-ui/core/TextField";
-
 import moment from "moment";
-
-import { withStyles, makeStyles } from "@material-ui/core/styles";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
 
 const ProfileScreen = ({ location, history }) => {
   const StyledTableCell = withStyles((theme) => ({
@@ -206,19 +208,19 @@ const ProfileScreen = ({ location, history }) => {
 
             {user.profileBackground && (
               <>
-              <img
-                alt={user.profileBackground}
-                src={user.profileBackground}
-                style={{ width: "100%" }}
-                draggable="false"
-              />
-               <br></br>
-               </>
+                <img
+                  alt={user.profileBackground}
+                  src={user.profileBackground}
+                  style={{ width: "100%" }}
+                  draggable="false"
+                />
+                <br></br>
+              </>
             )}
 
             {user.profileImage && (
               <>
-              {/* <div className="dividerrrprofile"></div> */}
+                {/* <div className="dividerrrprofile"></div> */}
                 <center>
                   <Avatar
                     alt={user.profileImage}
